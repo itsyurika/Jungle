@@ -19,17 +19,6 @@ main section.categories-show {
       grid-template-columns: 1fr;
     }
     article {
-      .soldout {
-        min-width: 110px;
-        background: rgba(224, 14, 14, 0.8);
-        border: 1px solid rgba(224, 14, 14, 0.8);
-        border-radius: 0.25em;
-        color: white;
-        padding: 0.375rem 0.75rem;
-        font-size: 1rem;
-        border-radius: 0.25rem;
-      }
-
       a {
         text-decoration: none;
       }
@@ -52,6 +41,23 @@ main section.categories-show {
         button {
           background: white;
           color: rgba(0, 130, 29, 0.7);
+        }
+      }
+      
+      .soldout {
+        min-width: 110px;
+        background: rgba(224, 14, 14, 0.8);
+        border: 1px solid rgba(224, 14, 14, 0.8);
+        border-radius: 0.25em;
+        color: white;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        pointer-events: none;
+        &:hover {
+          transition: all 150ms linear;
+          background-color: white;
+          color: rgba(224, 14, 14, 0.8);
         }
       }
       img {
