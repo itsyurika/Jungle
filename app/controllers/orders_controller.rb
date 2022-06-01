@@ -3,6 +3,8 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
   end
+  helper_method :order
+
 
   def create
     charge = perform_stripe_charge
