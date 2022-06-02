@@ -1,0 +1,16 @@
+<tr>
+  <td>
+    <h4><%= category.name %></h4>
+    <br>
+  </td>
+  <td>
+    <p><% category.products.each do |product| %>
+        <%= product.name%><br>
+        <%end%>
+    </p>
+  </td>
+  <td>
+    <h3>30</h3>
+  </td>
+  
+</tr>

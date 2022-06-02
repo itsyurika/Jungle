@@ -16,6 +16,7 @@
       </thead>
       <tbody>
         <% @order.line_items.each do |item| %>
+          <%= item.product.inspect%>
           <%= render 'line_items', product: item.product, quantity: item[:quantity] %>
         <%end%>
       </tbody>
