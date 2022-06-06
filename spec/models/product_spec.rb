@@ -28,13 +28,11 @@ RSpec.describe Product, type: :model do
         @product.price = nil
         @product.price_cents = nil
         @product.save
-        puts @product.errors.full_messages
         expect(@product.errors.full_messages).to include ("Price can't be blank")
       end
 
       it "fails to save the new product when it is missing category" do
         @product2 = Product.new({ name: 'London plant', quantity: 8, price: 35, category: nil })
-        puts @product2.inspect
         @product2.save
         expect(@product2.errors.full_messages).to include ("Category can't be blank")
 
