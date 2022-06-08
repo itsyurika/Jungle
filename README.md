@@ -1,7 +1,32 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1.
+Navigating an existing code-base and using the existing code style, the following new features were implemented.
 
+* Sold Out Badge
+  - When Product has 0 quantity, a sold out badge is displayed on the product list page and the add button is disabled
+* Admin Categories
+  - Admin users can list and create new categories
+  - Admin users can add new product using the new category
+* User Authentication
+  - Visitors can register and create an account from any page with e-mail, password, first and last name
+  - Unique e-mail address is validated for registration
+  - Passwords are saved securely leveraging the bcrypt gem
+  - Visitors can sign in using the registered e-mail and password
+* Order Details Page
+  - After successful order, the page contains items, image, name, description, quantities and line item totals for detailed order info
+
+The following bugs were fixed as well.
+
+* Missing Admin Security
+  - User must enter HTTP auth login/password to access funcitonality now
+* Checkout page with an empty cart
+  - When the cart is empty, the carts page will display a related message instead of an empty cart
+
+## Testing 
+
+The newly implemented features and functions were tested using rspec model testing and cypress E2E feature testing.
+ 
 ## Setup
 
 1. Run `bundle install` to install dependencies
